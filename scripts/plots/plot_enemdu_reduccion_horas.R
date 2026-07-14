@@ -32,13 +32,18 @@ plot_df <- chart_data %>%
 
 
 title_raw <- "Sin importar el sector, los ecuatorianos trabajan cada vez menos horas"
-subtitle_txt <- "Reducción en el promedio de horas de trabajo a la semana (2007 vs. 2026)."
+subtitle_txt <- "Cambio en la jornada laboral promedio a lo largo de las últimas \ndos décadas (2007-2026)"
 
 caption_raw <- paste0(
-  "Fuente: ENEMDU - INEC, marzo 2026. Cálculos por el autor.\n",
-  "Guía de lectura: Las barras hacia abajo indican el porcentaje de horas que se han reducido."
+  "Fuente: ENEMDU - INEC, marzo 2026. Cálculos de Eddie Tomalá para El Quantificador de ",
+  "Laboratorio LIDE. Las barras hacia abajo indican el porcentaje de horas que se han reducido. ",
+  "El análisis comprende a la población de 15 años o más. La variación se calcula sobre el promedio ",
+  "de horas de trabajo en la semana de referencia. Las omisiones en la clasificación del sector laboral ",
+  "fueron imputadas utilizando la tenencia de seguridad social como proxy de formalidad."
 )
-caption_txt <- stringr::str_wrap(caption_raw, width = 97)
+
+
+caption_txt <- stringr::str_wrap(caption_raw, width = 70)
 
 
 palette_fill <- c(
@@ -92,7 +97,8 @@ build_chart <- function() {
       legend.background = element_blank(),
       legend.key = element_blank(),
       legend.text = element_text(size = 8, face = "bold"),
-      legend.margin = margin(b = 15) 
+      legend.margin = margin(b = 15),
+      plot.margin = margin(t = 10, r = 15, b = 5, l = 15)
     )
 }
 
@@ -100,7 +106,7 @@ build_chart <- function() {
 dir.create("outputs/figures", showWarnings = FALSE, recursive = TRUE)
 
 spec <- house_spec("portrait")
-p_final <- house_apply_logo(build_chart(), "portrait", x = 0.85, y = 0.05) 
+p_final <- house_apply_logo(build_chart(), "portrait", x = 0.82, y = 0.12) 
 dest <- out_path
 
 ggsave(

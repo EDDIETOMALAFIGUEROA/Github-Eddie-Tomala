@@ -1,0 +1,1 @@
+Esta carpeta almacena localmente los microdatos históricos de la ENEMDU. Por su peso, no se sincronizan en GitHub.

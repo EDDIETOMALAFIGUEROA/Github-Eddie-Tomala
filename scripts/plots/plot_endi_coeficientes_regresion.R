@@ -45,9 +45,9 @@ title_raw <- "El impacto de la educación materna y la estimulación temprana en
 subtitle_raw <- "Un vistazo a los factores del entorno familiar que suman o restan palabras al desarrollo de los niños."
 
 caption_raw <- paste0(
-  "Fuente Encuesta Nacional de Desnutrición Infantil (ENDI 2022), INEC. ",
+  "Fuente: Encuesta Nacional de Desnutrición Infantil (ENDI 2022), INEC. ",
   "Cálculos de Eddie Tomalá para El Quantificador de Laboratorio LIDE. ",
-  "Nota metodológica Los puntos representan el cambio esperado en el Z-Score de vocabulario (TVIP) ",
+  "Los puntos representan el cambio esperado en el Z-Score de vocabulario (TVIP) ",
   "por cada unidad de cambio en la variable independiente manteniendo el resto constante."
 )
 

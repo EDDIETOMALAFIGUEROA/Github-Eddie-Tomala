@@ -21,7 +21,7 @@ subtitle_raw <- "Puntaje directo del Test de Vocabulario en Imágenes Peabody (T
 caption_raw <- paste0(
   "Fuente: Encuesta Nacional de Desnutrición Infantil (ENDI 2022), INEC. ",
   "Cálculos de Eddie Tomalá para El Quantificador de Laboratorio LIDE. ",
-  "Nota metodológica Las curvas representan el ajuste suavizado local (LOESS) ",
+  "Las curvas representan el ajuste suavizado local (LOESS) ",
   "del puntaje crudo del Test de Vocabulario en Imágenes Peabody (TVIP)."
 )
 

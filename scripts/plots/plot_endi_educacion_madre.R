@@ -21,7 +21,7 @@ subtitle_raw <- "Distribución del puntaje de vocabulario estandarizado por la e
 caption_raw <- paste0(
   "Fuente: Encuesta Nacional de Desnutrición Infantil (ENDI 2022), INEC. ",
   "Cálculos de Eddie Tomalá para El Quantificador de Laboratorio LIDE. ",
-  "Nota metodológica Muestra restringida a niños hispanohablantes evaluados con la prueba TVIP. ",
+  "Muestra restringida a niños hispanohablantes evaluados con la prueba TVIP. ",
   "El puntaje estandarizado Z expresa desviaciones respecto a la media de cada grupo etario."
 )
 

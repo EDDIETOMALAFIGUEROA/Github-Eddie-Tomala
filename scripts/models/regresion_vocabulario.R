@@ -4,15 +4,16 @@
 # Entrada: data/processed/endi_vocabulario_muestra.rds
 # Salida:  data/processed/coeficientes_modelo.rds
 #          outputs/tables/tabla_regresion_vocabulario.html
+#          outputs/figures/tabla_regresion_vocabulario.png
 # ==========================================================================
 
 source("scripts/packages.R")
 
-ensure_packages(c("dplyr", "survey", "car", "broom", "stargazer"))
+ensure_packages(c("dplyr", "survey", "car", "broom", "stargazer", "webshot2"))
 
-
+Sys.setenv(CHROMOTE_CHROME = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe")
+ 
 muestra <- readRDS("data/processed/endi_vocabulario_muestra.rds")
-
 
 muestra <- muestra %>%
   mutate(fexp_di = suppressWarnings(as.numeric(fexp_di))) %>%
@@ -49,4 +50,7 @@ stargazer(modelo_final,
           header = FALSE, 
           single.row = FALSE) 
 
-message("Modelo ejecutado. Tabla académica guardada en outputs/tables/")
+webshot("outputs/tables/tabla_regresion_vocabulario.html", 
+        file = "outputs/figures/tabla_regresion_vocabulario.png")
+
+message("Modelo ejecutado. Archivo HTML conservado en outputs/tables/ e imagen exportada a outputs/figures/")
